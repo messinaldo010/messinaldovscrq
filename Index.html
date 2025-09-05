@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Tráiler - Examen Diagnóstico</title>
+  <style>
+    :root {
+      --bg1: #1e3c72;
+      --bg2: #2a5298;
+      --accent: #ff4757;
+      --accent-hover: #e84118;
+      --shadow: rgba(0,0,0,0.7);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 30px 16px;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      animation: fadeIn 1.2s ease-out both;
+    }
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      padding: 20px 16px 60px;
+      animation: fadeUp 1s ease-out both;
+    }
+    .bloque {
+      width: min(920px, 92vw);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+      backdrop-filter: blur(4px);
+    }
+    h2 {
+      margin: 6px 0 14px;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .img-main,
+    .qr img {
+      width: 100%;
+      max-width: 560px;
+      border-radius: 16px;
+      box-shadow: 0 8px 22px var(--shadow);
+      transition: transform .25s ease;
+    }
+    .img-main:hover,
+    .qr img:hover { transform: scale(1.02); }video {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .25s ease, transform .1s ease;
+  margin-top: 6px;
+  text-decoration: none;
+}
+.btn:hover { background: var(--accent-hover); }
+.btn:active { transform: translateY(1px); }
+
+.galeria-libreta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+.galeria-libreta img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px var(--shadow);
+  transition: transform .25s ease;
+}
+.galeria-libreta img:hover { transform: scale(1.03); }
+
+footer { opacity: .8; font-size: .9rem; padding: 14px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>  <header>📘 Mini Tráiler — Examen Diagnóstico</header>  <!-- Foto principal de la libreta -->  <section class="contenedor bloque">
+    <h2>Foto de la libreta 📒</h2>
+    <!-- Reemplaza libreta1.jpg por tu archivo real -->
+    <img class="img-main" src="libreta1.jpg" alt="Foto de la libreta (página principal)" />
+      </section>  <!-- Otras 3 fotos de la libreta -->  <section class="contenedor bloque">
+    <h2>Más fotos de la libreta (3) 📚</h2>
+    <div class="galeria-libreta">
+      <!-- Reemplaza libreta2.jpg, libreta3.jpg, libreta4.jpg por tus archivos reales -->
+      <img src="libreta2.jpg" alt="Foto de la libreta 2" />
+      <img src="libreta3.jpg" alt="Foto de la libreta 3" />
+      <img src="libreta4.jpg" alt="Foto de la libreta 4" />
+    </div>
+  </section>  <!-- Video del mini tráiler -->  <section class="contenedor bloque">
+    <h2>Video explicativo 🎬</h2>
+    <!-- Reemplaza trailer.mp4 por tu archivo real -->
+    <video controls>
+      <source src="trailer.mp4" type="video/mp4" />
+      Tu navegador no soporta el video HTML5.
+    </video>
+    <!-- (Opcional) Botón de acción -->
+    <div style="margin-top:12px;">
+      <button class="btn" onclick="alert('¡Gracias por ver el tráiler!')">Finalizar</button>
+    </div>
+  </section>  <!-- QR que lleva al video -->  <section class="contenedor bloque qr">
+    <h2>Escanea el QR para abrir el video 📲</h2>
+    <!-- Reemplaza qr.png por la imagen de tu QR -->
+    <img src="qr.png" alt="Código QR con enlace al video" />
+    <!-- (Opcional) Enlace de respaldo por si no pueden escanear -->
+    <!-- <a class="btn" href="https://tu-enlace-al-video" target="_blank" rel="noopener">Abrir el video</a> -->
+
+  </section>  <footer>
+    © Examen Diagnóstico — Mini Tráiler
+  </footer></body>
+</html>
